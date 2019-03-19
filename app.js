@@ -46,13 +46,27 @@ const media = [{
     type: 'streaming video',
     contributor: '',
     showDetail: false,
+  },
+  {
+    title: 'Eloquent JavaScript',
+    description: "A book to learn JavaScript.",
+    type: 'e-book',
+    contributor: '',
+    showDetail: false,
+  },
+  {
+    title: 'jQuery Cookbook',
+    description: "A book to learn jQuery.",
+    type: 'e-book',
+    contributor: '',
+    showDetail: false,
   }
 ]
 
 const app = new Vue({
   el: '#media-list',
   data: {
-    title: 'Treehouse Public Library',
+    title: 'Community Library',
     mediaList: media,
     type: ''
   },
@@ -63,6 +77,17 @@ const app = new Vue({
     },
     filterList: function() {
       this.type = event.target.value;
+    }
+  },
+  computed: {
+    uniqueItemsList: function() {
+      const types = [];
+      this.mediaList.forEach((item) => {
+        if(!types.includes(item.type)) {
+          types.push(item.type);
+        }
+      });
+      return types;
     }
   }
 });
