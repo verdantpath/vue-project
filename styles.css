@@ -67,8 +67,12 @@ li.book {
     border-left: #eb727e solid 5px;
 }
 
-li.streaming {
+li.streaming-video {
     border-left: #a0f2d0 solid 5px;
+}
+
+li.e-book {
+    border-left: #6b39ab solid 5px;
 }
 
 .byline {

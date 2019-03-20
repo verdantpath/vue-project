@@ -72,7 +72,6 @@ const app = new Vue({
   },
   methods: {
     toggleDetails: function (media) {
-      console.log(media);
       media.showDetail = !media.showDetail;
     },
     filterList: function() {
