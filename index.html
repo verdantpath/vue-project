@@ -19,9 +19,9 @@
         <option v-for="item in uniqueItemsList">{{ item }}</option>
       </select>
       <ul>
-        <li v-show="type === '' || type === media.type" 
-        v-for="media in mediaList" 
-        v-on:click="toggleDetails(media)" 
+        <li v-show="type === '' || type === media.type"
+        v-for="media in mediaList"
+        v-on:click="toggleDetails(media)"
         v-bind:class="[media.showDetail ? 'less' : 'more', media.type.split(' ').join('-').toLowerCase()]">
           <h3>{{ media.title }}</h3>
           <div v-show="media.showDetail">
@@ -30,6 +30,8 @@
           </div>
         </li>
       </ul>
+
+      <button class="reset" v-on:click="resetList">Reset</button>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>

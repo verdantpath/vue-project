@@ -76,6 +76,10 @@ const app = new Vue({
     },
     filterList: function() {
       this.type = event.target.value;
+    },
+    resetList: function() {
+      this.type = '';
+      console.log('reset clicked');
     }
   },
   computed: {
